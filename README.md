@@ -1,385 +1,210 @@
-# LeadSignal AI - Prospect Intelligence Engine
+# AI Prospecting & Website Audit Engine
 
-**Versione:** 1.0 (Pre-MVP - Setup Fase 1)  
-**Stato:** Repository Setup + Planning  
-**Ultimo aggiornamento:** 2026-04-30
+**LeadSignal AI** - Un motore AI per trasformare siti web e segnali digitali in opportunità commerciali pronte da contattare.
 
----
+## 🎯 Mission
 
-## 📋 Descrizione Progetto
+Aiutare agenzie marketing, web agency, consulenti SEO e software house a trovare prospect qualificati in modo intelligente, non generico. Ogni azienda target riceve un mini-audit personalizzato con problemi visibili, score di priorità e messaggi di contatto pronti all'uso.
 
-LeadSignal AI trasforma siti web e segnali digitali in opportunità commerciali pronte da contattare per agenzie marketing, web agency, consulenti B2B e software house.
+## 📊 Obiettivo Economico
 
-**Value Proposition:** Invece di consegnare liste di contatti generiche, il sistema:
-- Trova aziende target in una nicchia specifica
-- Analizza automaticamente il loro sito e presenza digitale
-- Produce mini-audit personalizzati con problemi visibili
-- Genera messaggi di contatto pronti per email e LinkedIn
-- Assegna uno score di priorità commerciale
+**2.000€/mese ricorrenti** entro 90 giorni
 
-**Obiettivo economico:** 2.000 euro/mese ricorrenti (es: 4 clienti @499€/mese)
+Target: 4 clienti da 499€/mese oppure mix di pilot (149€) + abbonamenti base/pro/premium
 
----
+## 🎪 Cosa Differenzia Questo Progetto
 
-## 🎯 Cliente Ideale
+❌ **Non è** un semplice scraper di email  
+❌ **Non è** un generatore generico di cold email  
+❌ **Non è** un clone di Apollo, Clay o Instantly  
 
-### Target Primario
+✅ **È** un sistema operativo di prospecting assistito con qualità alta  
+✅ **È** analisi sito automatizzata + diagnosi commerciale personalizzata  
+✅ **È** servizio productizzato che scala da manuale a semi-automatico a piattaforma  
+
+## 💡 Valore Consegnato al Cliente
+
+Ogni mese riceve:
+
+- **N prospect qualificati** (20-200 a seconda del piano)
+- **Mini-audit automatici** del sito web e segnali digitali
+- **Score di priorità** (1-5) basato su fit commerciale
+- **Problemi visibili** documentati con evidenza
+- **Messaggi email e LinkedIn** personalizzati pronti da usare
+- **Angoli commerciali** specifici per ogni prospect
+
+**In una sola frase:** Non riceviamo liste di email. Riceviamo opportunità commerciali con diagnosi.
+
+## 🏢 Cliente Ideale Iniziale
+
 - Web agency piccole/medie
 - Agenzie marketing locali
-- Consulenti SEO
+- Consulenti SEO freelance
 - Consulenti advertising
-- Software house (vendita siti, CRM, gestionali)
+- Software house
 - Consulenti B2B ad alto ticket
 
-### Nicchia Iniziale (Pilot)
-Web agency che vendono siti, SEO, advertising a:
-- Dentisti
-- Cliniche estetiche
-- Studi medici privati
-- Palestre premium
-- Agenzie immobiliari
-- Hotel e strutture ricettive
-- Studi legali
-- Consulenti finanziari
-- Ristoranti premium
+**Nicchia iniziale:** Web agency che vendono siti a dentisti, cliniche estetiche, palestre premium
 
----
+## 📦 Offerta Commerciale
 
-## 📦 Offerta Commerciale (Roadmap Pricing)
-
-### Pilot Pack (Validazione)
-**Prezzo:** 149€ (one-time)
-- 20 aziende target
+### Pilot Pack - 149€
+- 20 prospect target
 - 10 mini-audit sintetici
 - 5 audit completi
-- Scores di priorità
-- Messaggi email personalizzati
-- Delivery in Google Sheet
-- Call conclusiva 30 minuti
+- Messaggi personalizzati
+- Call di feedback 30'
 
-### Abbonamento Base
-**Prezzo:** 299€/mese
+### Abbonamento Base - 299€/mese
 - 50 prospect/mese
 - 20 mini-audit
-- 10 messaggi personalizzati
-- Database aggiornato
+- 10 messaggi ultra-personalizzati
 - Report mensile
 
-### Abbonamento Pro
-**Prezzo:** 499€/mese
+### Abbonamento Pro - 499€/mese
 - 100 prospect/mese
 - 50 mini-audit
 - 20 audit completi
-- Email + LinkedIn messages
-- Segmentazione per priorità
-- Export CSV/Sheet/CRM
+- Segmentazione priorità
+- Revisione strategica mensile
 
-### Abbonamento Premium
-**Prezzo:** 799-999€/mese
+### Premium - 799-999€/mese
 - 200 prospect/mese
-- Audit completi best prospects
+- Audit completi
 - Sequenze email complete
-- Setup CRM/Instantly/Lemlist
-- Monitoraggio risposte
+- Setup CRM
 - Dashboard performance
 
----
+## 📋 Fasi di Implementazione
 
-## 🏗️ Architettura - Moduli Principali
+### Fase 1: MVP 0 - Validazione Manuale (Settimane 1-3)
+Costruire manualmente il primo ciclo con template, ChatGPT e fogli Google.
 
-```
-Ricerca Prospect
-       ↓
-Raccolta Dati Pubblici
-       ↓
-Analisi Sito (Tecnica + AI)
-       ↓
-Generazione Mini-Audit
-       ↓
-Scoring Commerciale
-       ↓
-Generazione Messaggi
-       ↓
-Dashboard Cliente / Export
-```
+### Fase 2: MVP 1 - Semi-Automazione (Settimane 4-9)
+Script Python + API LLM per ridurre tempo a 2-5 min/prospect.
 
-### Modulo 1: Ricerca Prospect
-- Input: nicchia, area geografica, servizio da vendere
-- Output: lista aziende + sito + categoria + località
+### Fase 3: MVP 2 - Campagne Multi-Cliente (Mesi 2-3)
+Dashboard base, batch processing, PDF generati.
 
-### Modulo 2: Raccolta Dati Pubblici
-- Siti web aziendali
-- Directory pubbliche
-- Google Maps (con limiti)
-- Social public data
-- Job posting
-- News locali
+### Fase 4: SaaS Leggero (Dopo validazione)
+Login, billing, storico, export CRM.
 
-### Modulo 3: Analisi Sito
-**Analisi Deterministiche:**
-- Page speed (mobile/desktop)
-- Mobile responsiveness
-- SSL
-- Meta tags (title, description)
-- H1/H2 structure
-- Form presenti
-- Link rotti
-- Tech stack (BuiltWith)
-
-**Analisi AI:**
-- Chiarezza messaggio
-- Qualità posizionamento
-- Problemi conversione
-- Trust signals
-- Angolo commerciale
-- Sintesi problemi
-
-### Modulo 4: Tipi di Audit (Modulari)
-- **Audit Conversione:** CTA, hero section, form, telefono, percorso prenotazione
-- **Audit Trust:** Recensioni, testimonianze, case study, team, certificazioni
-- **Audit Tecnico:** Velocità, mobile, errori, SSL, sitemap, meta
-- **Audit SEO/Local:** Keywords, pagine, contenuti locali, GBP, competitor
-- **Audit AI Visibility:** Entità azienda, NAP, schema markup, directory
-- **Audit Offerta:** Differenziazione, promessa, benefici, pricing, proof
-
-### Modulo 5: Scoring Prospect (1-5 scale)
-Considera: fit, budget probabile, gravità problemi, urgenza, facilità contatto, ROI potenziale
-
-### Modulo 6: Generazione Messaggi
-- Email principal
-- Follow-up 1, 2
-- Messaggio LinkedIn
-- Script chiamata
-- Tono: specifico, non aggressivo, basato su evidenze
-
-### Modulo 7: Dashboard Cliente
-- Prospect generati + scores
-- Audit + messaggi
-- Export (CSV, Sheets, Airtable, HubSpot, Pipedrive)
-- Tracking risposte (futuro)
-
----
-
-## 📊 Database Schema (Prospect Record)
-
-### Campi Anagrafici
-- `id_prospect`
-- `nome_azienda`
-- `sito`
-- `settore` / `sottosettore`
-- `paese` / `regione` / `citta`
-- `fonte`
-- `data_raccolta`
-
-### Campi Digitali (Deterministic)
-- `has_ssl`
-- `page_speed_mobile`
-- `page_speed_desktop`
-- `meta_title`
-- `meta_description`
-- `h1_present`
-- `tech_stack`
-- `has_contact_form`
-- `has_phone`
-- `has_whatsapp`
-- `has_booking_system`
-- `has_reviews`
-- `has_case_studies`
-
-### Campi AI (Analysis)
-- `company_summary`
-- `main_problem`
-- `secondary_problems`
-- `commercial_opportunity`
-- `message_angle`
-- `score_fit` (0-100)
-- `score_pain` (0-100)
-- `score_budget` (0-100)
-- `priority_score` (1-5)
-- `confidence_level`
-
-### Campi Outreach
-- `email_generated`
-- `linkedin_message`
-- `followup_1`
-- `followup_2`
-- `contact_status`
-- `last_contact_date`
-- `response`
-- `client_notes`
-
----
-
-## 🔄 Fasi di Sviluppo
-
-### **Fase 1: MVP 0 - Validazione Manuale (2-3 settimane)**
-Status: **ATTUALE**
-
-✅ Strumenti:
-- Google Sheets
-- ChatGPT / Claude
-- Browser + tools manuali
-- PageSpeed Insights
-- BuiltWith / Wappalyzer
-
-📋 Deliverables:
-- Template Google Sheet
-- Template mini-audit
-- Prompt standard
-- 10-20 esempi reali
-- Landing page semplice
-- Script outreach
-
-🎯 Obiettivo:
-- Validare che clienti paghino pilot
-- Misurare: quante agenzie rispondono positivamente
-
----
-
-### **Fase 2: MVP 1 - Automazione Audit (3-6 settimane)**
-Status: PLANNED
-
-- Script Python per analisi tecnica
-- API LLM (OpenAI/Claude) per AI analysis
-- Google Sheets API per export
-- Screenshot automatici
-- Generazione PDF
-- Riduzione tempo audit da 20-40 min → 2-5 min
-
----
-
-### **Fase 3: MVP 2 - Campagne Multi-Cliente (1-2 mesi)**
-Status: PLANNED
-
-- Profilo cliente pagante
-- Gestione campagne multi-prospect
-- Report multipli + batch processing
-- Dashboard base
-- Generazione PDF automatica
-
----
-
-### **Fase 4: SaaS Leggero (Dopo validazione commerciale)**
-Status: FUTURE
-
-- Web app con login
-- Billing Stripe
-- Database centralizzato
-- Storico audit
-- Export CRM multi-piattaforma
-- Ruoli utente
-- Monitoring costi API
-
----
-
-## 📁 Struttura Repository
+## 🗂️ Struttura Repository
 
 ```
 AI-prospecting/
 ├── README.md (questo file)
-├── PROJECT_SPEC.md (spec completa originale)
-├── ROADMAP.md (timeline dettagliata)
-├── docs/
-│   ├── 01_CLIENT_ONBOARDING.md (questionnaire cliente)
-│   ├── 02_AUDIT_TEMPLATES.md (template audit per tipo)
-│   ├── 03_PROMPT_LIBRARY.md (prompt standard AI)
-│   ├── 04_SCORING_LOGIC.md (logica scoring)
-│   └── 05_MESSAGING_TEMPLATES.md (template messaggi)
+├── PROJECT_SPEC.md (specifica completa)
+├── ROADMAP.md (piano 30 giorni)
 ├── templates/
-│   ├── google_sheet_template.md (setup sheet)
-│   ├── audit_report_template.md (template audit)
-│   ├── email_messages.md (esempi email)
-│   └── linkedin_messages.md (esempi LinkedIn)
+│   ├── audit_mini.md
+│   ├── audit_completo.md
+│   ├── email_template.md
+│   └── linkedin_template.md
+├── prompts/
+│   ├── audit_conversion.txt
+│   ├── audit_trust.txt
+│   ├── audit_seo.txt
+│   ├── message_generation.txt
+│   └── scoring.txt
+├── scripts/
+│   ├── prospect_research.py
+│   ├── site_analysis.py
+│   ├── audit_generator.py
+│   └── message_generator.py
 ├── examples/
-│   ├── example_01_dentist_clinic.md
-│   ├── example_02_aesthetic_clinic.md
-│   ├── example_03_gym_premium.md
-│   └── example_04_law_firm.md
-├── operations/
-│   ├── day_01_03_planning.md
-│   ├── day_04_07_demo_building.md
-│   ├── day_08_15_outreach.md
-│   ├── day_16_21_sales.md
-│   └── day_22_30_delivery.md
-├── metrics/
-│   ├── internal_metrics.md (KPI produzione)
-│   ├── commercial_metrics.md (KPI vendita)
-│   └── client_metrics.md (KPI cliente)
-├── compliance/
-│   ├── GDPR_GUIDELINES.md
-│   ├── DATA_SOURCES.md (fonti dati autorizzate)
-│   └── LEGAL_CHECKLIST.md
-└── .gitignore
+│   ├── prospect_1.json
+│   ├── audit_example_1.md
+│   └── campaign_example.csv
+├── docs/
+│   ├── COMPLIANCE.md
+│   ├── TECHNICAL_ARCHITECTURE.md
+│   └── OPERATIONS.md
+└── config/
+    ├── settings.py
+    └── api_keys.example.env
 ```
 
+## 🚀 Piano 30 Giorni
+
+### Giorni 1-3: Setup Base
+- Scegliere nicchia iniziale
+- Preparare template e prompt
+- Creare 10 esempi reali
+
+### Giorni 4-7: Demo Production
+- 20 prospect analizzati
+- 10 mini-audit completati
+- 3 audit completi
+- 3 messaggi personalizzati
+
+### Giorni 8-15: Outreach
+- Contattare 30 agenzie
+- Proporre 3 esempi gratuiti
+- Raccogliere feedback
+
+### Giorni 16-21: Demo e Vendita
+- Call con interessati
+- Proporre pilot pagato (149€)
+
+### Giorni 22-30: Primo Ciclo
+- Consegnare primo pilot
+- Chiedere feedback
+- Proporre abbonamento mensile
+
+## 📈 Metriche di Successo
+
+- ✅ Almeno 1 pilot pagato entro day 30
+- ✅ Tasso risposta outreach > 20%
+- ✅ Tempo generazione prospect < 5 min
+- ✅ Qualità audit percepita positivamente
+- ✅ Cliente usa realmente i messaggi
+
+## ⚠️ Criteri di Pivot
+
+Se dopo 60 giorni di outreach intenso:
+- Nessun cliente paga
+- Feedback dice "non è urgente"
+- Le agenzie preferiscono tool free
+
+Allora pivot verso:
+- AI receptionist per nicchia
+- AI content engine
+- AI recruiting tecnico
+
+## 📞 Primo Contatto Outreach
+
+```
+Ciao [Nome],
+
+Ho visto che lavorate su [servizio/settore].
+
+Sto testando un sistema che trova aziende potenzialmente 
+compatibili con i vostri servizi, ma invece di consegnare 
+una lista generica genera un mini-audit del sito, evidenzia 
+problemi visibili e prepara un messaggio personalizzato 
+pronto da usare.
+
+Ho preparato 3 esempi nel vostro mercato. Te li mando?
+
+Matteo
+```
+
+## 📚 Documentazione Completa
+
+- **[PROJECT_SPEC.md](./PROJECT_SPEC.md)** - Specifica tecnica e strategica completa
+- **[ROADMAP.md](./ROADMAP.md)** - Piano esecutivo 30 giorni
+
+## 🔧 Prossimi Step
+
+1. ✅ Validare con 3-5 agenzie (feedback sul valore)
+2. ⏳ Chiudere 1° pilot pagato
+3. ⏳ Automatizzare ciclo di produzione audit
+4. ⏳ Raggiungere 2.000€/mese ricorrenti
+5. ⏳ Buildare dashboard self-service
+
 ---
 
-## ✅ Checklist Setup Repository
-
-- [x] README.md creato
-- [ ] PROJECT_SPEC.md (copia spec)
-- [ ] ROADMAP.md (timeline)
-- [ ] Template docs/
-- [ ] Esempi iniziali (examples/)
-- [ ] Operazioni 30gg (operations/)
-- [ ] Compliance docs
-- [ ] .gitignore configurato
-
----
-
-## 🚀 Prossimi Passi (Giorni 1-3)
-
-1. **Scegliere nicchia pilot:**
-   - Web agency → dentisti/cliniche estetiche/palestre
-
-2. **Definire cliente ideale preciso:**
-   - Questionnaire da compilare
-
-3. **Preparare 3 esempi reali:**
-   - Prospect
-   - Mini-audit
-   - Messaggio personalizzato
-
-4. **Setup Google Sheet template:**
-   - Colonne standard
-   - Formule base
-   - Filtri scoring
-
-5. **Creare landing page semplicissima:**
-   - Problema + soluzione
-   - Esempio + CTA
-
-6. **Scrivere script outreach:**
-   - Messaggio LinkedIn/email
-   - Offer pilot
-
----
-
-## 📞 Contatti & Risorse
-
-**Repository Owner:** @MatteoMarello  
-**Progetto:** LeadSignal AI  
-**Email (ipotetica):** [sera definire]  
-**Status:** Pre-MVP Setup Phase
-
----
-
-## 📜 Versione Document
-
-| Data | Versione | Autore | Note |
-|------|----------|--------|------|
-| 2026-04-30 | 1.0 | MatteoMarello | Repository setup iniziale, nessun codice |
-
----
-
-## 🔗 Link Utili
-
-- [Project Specification (Completa)](./PROJECT_SPEC.md) - Spec dettagliata originale
-- [30-Day Operational Plan](./operations/) - Piano giorno per giorno
-- [Audit Templates](./docs/02_AUDIT_TEMPLATES.md) - Template per audit
-- [Scoring Logic](./docs/04_SCORING_LOGIC.md) - Come calcolare priority score
-
----
-
-**Nota:** Questo è il setup iniziale. Nessun codice è stato scritto. Il focus è su planning, templates, e validazione commerciale manuale prima di automazione.
-
+**Versione:** 1.0  
+**Ultimo aggiornamento:** Aprile 2026  
+**Responsabile:** Matteo Marello
